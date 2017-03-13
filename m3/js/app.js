@@ -6,7 +6,7 @@ angular.module('NarrowItDownApp', [])
 .service('MenuSearchService', MenuSearchService)
 .directive('foundItems', foundItems)
 .controller('foundItemsController', foundItemsController)
-.constant('API', 'http://davids-restaurant.herokuapp.com');
+.constant('API', 'https://davids-restaurant.herokuapp.com');
 
 
 /******************************************************************************/
