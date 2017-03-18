@@ -88,7 +88,7 @@ function MenuSearchService( $http, API) {
         var ql = q.toLowerCase();
         for(var i in result.data.menu_items) {
           var toCheck = result.data.menu_items[i];
-          if(toCheck.name.toLowerCase().indexOf(ql) != -1) {
+          if(toCheck.description.toLowerCase().indexOf(ql) != -1) {
             items=items.concat(toCheck);
           }
         }
