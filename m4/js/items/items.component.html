@@ -1,0 +1,20 @@
+<div class="content">
+
+  <h2>Our items in {{ $ctrl.items.category.name }} ({{$ctrl.items.category.short_name}})</h2>
+
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+    <tr ng-repeat="item in $ctrl.items.menu_items">
+        <td>{{ item.name }}</td>
+        <td>{{ item.description }}</td>
+    </tr>
+  </table>
+
+  <div ng-if="$ctrl.items.category.special_instructions" class="special">
+    {{ $ctrl.items.category.special_instructions }}
+  </div>
+
+</div>

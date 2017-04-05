@@ -1,0 +1,11 @@
+<div class="content">
+  <h2>Our categories</h2>
+
+  <table class="active">
+    <tr ng-repeat="cat in $ctrl.items" ui-sref="items({id: cat.short_name})">
+      <td>{{ cat.short_name }}</td>
+      <td>{{ cat.name }}</td>
+    </tr>
+  </table>
+
+</div>
