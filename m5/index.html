@@ -5,9 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>David Chu's China Bistro</title>
+
+    <link rel="apple-touch-icon" sizes="57x57" href="https://d3njjcbhbojbot.cloudfront.net/web/images/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="https://d3njjcbhbojbot.cloudfront.net/web/images/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="https://d3njjcbhbojbot.cloudfront.net/web/images/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="https://d3njjcbhbojbot.cloudfront.net/web/images/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="https://d3njjcbhbojbot.cloudfront.net/web/images/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="https://d3njjcbhbojbot.cloudfront.net/web/images/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="https://d3njjcbhbojbot.cloudfront.net/web/images/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="https://d3njjcbhbojbot.cloudfront.net/web/images/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://d3njjcbhbojbot.cloudfront.net/web/images/favicons/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="https://d3njjcbhbojbot.cloudfront.net/web/images/favicons/icon-194x194.png" sizes="194x194">
+    <link rel="icon" type="image/png" href="https://d3njjcbhbojbot.cloudfront.net/web/images/favicons/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="https://d3njjcbhbojbot.cloudfront.net/web/images/favicons/icon-blue-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="https://d3njjcbhbojbot.cloudfront.net/web/images/favicons/icon-blue-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="https://d3njjcbhbojbot.cloudfront.net/web/images/favicons/icon-blue-32x32.png" sizes="32x32">
+
     <link href='https://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.css" />
+    <!-- endbower -->
+
     <link rel="stylesheet" href="css/restaurant.css">
     <link rel="stylesheet" href="css/common.css">
   </head>
@@ -51,12 +72,12 @@
                   <span class="glyphicon glyphicon-cutlery"></span><br class="hidden-xs"> Menu</a>
               </li>
               <li>
-                <a href="#">
-                  <span class="glyphicon glyphicon-info-sign"></span><br class="hidden-xs"> About</a>
+                <a href="#" ui-sref="public.myinfo">
+                  <span class="glyphicon glyphicon-user"></span><br class="hidden-xs"> My Info</a>
               </li>
               <li>
-                <a href="#">
-                  <span class="glyphicon glyphicon-certificate"></span><br class="hidden-xs"> Awards</a>
+                <a href="#" ui-sref="public.signup">
+                  <span class="glyphicon glyphicon-pencil"></span><br class="hidden-xs"> Sign Up</a>
               </li>
               <li id="phone" class="hidden-xs">
                 <a href="tel:410-602-5008">
@@ -111,10 +132,16 @@
     </footer>
 
     <!-- Libs -->
-    <script src="lib/jquery-2.1.4.min.js"></script>
-    <script src="lib/bootstrap.min.js"></script>
-    <script src="lib/angular.min.js"></script>
-    <script src="lib/angular-ui-router.min.js"></script>
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-aria/angular-aria.js"></script>
+    <script src="bower_components/angular-messages/angular-messages.js"></script>
+    <script src="bower_components/angular-material/angular-material.js"></script>
+    <!-- endbower -->
 
     <!-- Main Restaurant Module -->
     <script src="src/restaurant.module.js"></script>
@@ -132,6 +159,9 @@
     <script src="src/public/menu-category/menu-category.component.js"></script>
     <script src="src/public/menu-items/menu-items.controller.js"></script>
     <script src="src/public/menu-item/menu-item.component.js"></script>
+
+    <script src="src/public/menu-signup/menu-signup.controller.js"></script>
+    <script src="src/public/menu-myinfo/menu-myinfo.controller.js"></script>
 
     <!-- ADMIN SITE -->
 

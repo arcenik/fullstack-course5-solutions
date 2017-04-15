@@ -9,12 +9,15 @@ MenuService.$inject = ['$http', 'ApiPath'];
 function MenuService($http, ApiPath) {
   var service = this;
 
-  service.getCategories = function () {
-    return $http.get(ApiPath + '/categories.json').then(function (response) {
-      return response.data;
-    });
-  };
+  var myInfos = null; // pretend it's saved somewhere :-p
 
+  service.getCategories = function () {
+    return $http
+      .get(ApiPath + '/categories.json')
+      .then(function (response) {
+        return response.data;
+      });
+  };
 
   service.getMenuItems = function (category) {
     var config = {};
@@ -22,13 +25,31 @@ function MenuService($http, ApiPath) {
       config.params = {'category': category};
     }
 
-    return $http.get(ApiPath + '/menu_items.json', config).then(function (response) {
-      return response.data;
-    });
+    return $http
+      .get(ApiPath + '/menu_items.json', config)
+      .then(function (response) {
+        return response.data;
+      });
   };
 
+  service.getMenuItem = function (item) {
+    return $http
+     .get(ApiPath + '/menu_items/'+item+'.json')
+     .then(function (response) {
+        return response.data;
+      });
+  };
+
+  service.setMyInfo = function( data) {
+    console.log(">>> setMyInfo", data);
+    myInfos = data;
+  };
+
+  service.getMyInfo = function () {
+    console.log("<<< getMyInfo", myInfos);
+    return myInfos;
+  }
+
 }
-
-
 
 })();

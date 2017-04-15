@@ -1,3 +1,34 @@
+/* SIGN UP */
+
+#menu-signup, #menu-myinfo {
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+}
+
+#menu-signup button, #menu-signup input, #menu-signup select {
+  color: black;
+}
+
+#menu-signup label {
+  padding: 0px;
+}
+
+#menu-signup span {
+  padding: 5px;
+}
+
+#menu-signup .error {
+  color: red;
+}
+
+/* END SIGN UP */
+
+/* MY INFO */
+
+/* END MY INFO */
+
 /* HOME PAGE */
 .container .jumbotron {
   box-shadow: 0 0 50px #3F0C1F;

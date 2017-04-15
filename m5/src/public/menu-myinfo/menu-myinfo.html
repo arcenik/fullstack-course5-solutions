@@ -1,0 +1,39 @@
+<div id="menu-myinfo">
+  <h2>Your informations</h2>
+  <hr>
+  <div class="container" ng-if="! $ctrl.info">
+    Not signed up yet !<br>
+    <a ui-sref="public.signup">Sign up now !</a> !
+  </div>
+  <div class="container" ng-if="$ctrl.info">
+
+
+    <span class="container col-sm-6 col-xs-12">
+      <label class="col-md-5 col-sm-6 col-xs-12">First&nbsp;Name</label>
+      <label class="col-md-7 col-sm-6 col-xs-12">{{ $ctrl.info.fn }}</label>
+    </span>
+
+    <span class="container col-sm-6 col-xs-12">
+      <label class="col-md-5 col-sm-6 col-xs-12">Last&nbsp;Name</label>
+      <label class="col-md-7 col-sm-6 col-xs-12">{{ $ctrl.info.ln }}</label>
+    </span>
+
+    <span class="container col-sm-6 col-xs-12">
+      <label class="col-md-5 col-sm-6 col-xs-12">Phone&nbsp;Number</label>
+      <label class="col-md-7 col-sm-6 col-xs-12">{{ $ctrl.info.phone }}</label>
+    </span>
+
+    <span class="container col-sm-6 col-xs-12">
+      <label class="col-md-5 col-sm-6 col-xs-12">Email&nbsp;Address</label>
+      <label class="col-md-7 col-sm-6 col-xs-12">{{ $ctrl.info.email }}</label>
+    </span>
+
+  </div>
+
+  <div class="col-xs12" ng-if="$ctrl.fav_item">
+    <hr>
+    <h3>Your favorite dish : {{ $ctrl.fav_item.name }} ({{ $ctrl.fav_item.short_name }})</h3>
+    <span>{{ $ctrl.fav_item.description }}</span>
+  </div>
+
+</div>

@@ -1,0 +1,24 @@
+{
+  "name": "Fullstack-course5-m5-solution",
+  "homepage": "https://github.com/arcenik/fullstack-course5-solutions",
+  "authors": [
+    "Francois Scala <github@arcenik.net>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "3.3.4",
+    "angular":"^1.6.4",
+    "angular-ui-router":"^0.4.2",
+    "angular-material": "^1.1.3"
+  }
+}

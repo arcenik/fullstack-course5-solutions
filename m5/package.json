@@ -1,0 +1,8 @@
+{
+  "name": "Fullstack-course5-m5-solution",
+  "version": "0.1.0",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-bower-install": "^1.6.0"
+  }
+}

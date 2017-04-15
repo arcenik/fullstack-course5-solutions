@@ -1,0 +1,98 @@
+<div id="menu-signup">
+
+  <h2>Register to our newsletter</h2>
+  <hr>
+
+  <div class="container">
+    <form name="regForm" novalidate>
+
+      <span class="container col-sm-6 col-xs-12">
+        <label class="col-md-5 col-sm-6 col-xs-12">First&nbsp;Name</label>
+        <input class="col-md-7 col-sm-6 col-xs-12" type="text" name="fn"
+               ng-model="$ctrl.first_name"
+               placeholder="Enter a value" required>
+        <span class="col-md-12 col-sm-12 col-xs-12 error"
+              ng-if="regForm.fn.$error.required && regForm.fn.$touched">
+          First name needed</span>
+      </span>
+
+      <span class="container col-sm-6 col-xs-12">
+        <label class="col-md-5 col-sm-6 col-xs-12">Last&nbsp;Name</label>
+        <input class="col-md-7 col-sm-6 col-xs-12" type="text" name="ln"
+               ng-model="$ctrl.last_name"
+               placeholder="Enter a value" required>
+        <span class="col-md-12 col-sm-12 col-xs-12 error"
+              ng-if="regForm.ln.$error.required && regForm.ln.$touched">
+          Last name needed</span>
+      </span>
+
+      <span class="container col-sm-6 col-xs-12">
+        <label class="col-md-5 col-sm-6 col-xs-12">Email&nbsp;Address</label>
+        <input class="col-md-7 col-sm-6 col-xs-12" type="email" name="email"
+               ng-model="$ctrl.email"
+               placeholder="Enter a value" required>
+        <span class="col-md-12 col-sm-12 col-xs-12 error"
+              ng-if="regForm.email.$error.required && regForm.email.$touched">
+          Email address is needed</span>
+        <span class="col-md-12 col-sm-12 col-xs-12 error"
+              ng-if="regForm.email.$invalid && regForm.email.$touched">
+          Email address is invalid </span>
+      </span>
+
+      <span class="container col-sm-6 col-xs-12">
+        <label class="col-md-5 col-sm-6 col-xs-12">Phone&nbsp;Number</label>
+        <input class="col-md-7 col-sm-6 col-xs-12" type="text" name="phone"
+               ng-model="$ctrl.phone"
+               placeholder="Enter a value" required>
+        <span class="col-md-12 col-sm-12 col-xs-12 error"
+              ng-if="regForm.phone.$error.required && regForm.phone.$touched">
+          Phone number is needed</span>
+      </span>
+
+      <span class="container col-sm-12 col-xs-12">
+        <label class="col-md-6 col-sm-6 col-xs-12">What is your favorite dish ?</label>
+
+        <!-- <select class="col-md-6 col-sm-6 col-xs-12" style="align: right;"
+                name="fav" ng-model="$ctrl.fav">
+          <option ng-repeat="item in $ctrl.items" value="{{ item.short_name }}">
+            {{ item.name }} ({{ item.short_name }})
+          </option>
+        </select> -->
+
+        <input class="col-md-6 col-sm-6 col-xs-12" type="text" name="fav"
+               ng-model="$ctrl.fav"
+               placeholder="Enter a value" required>
+        <span class="col-md-12 col-sm-12 col-xs-12 error"
+              ng-if="regForm.fav.$error.required && regForm.fav.$touched">
+          Favorite dish is needed</span>
+
+      </span>
+
+      <span class="col-xs12">
+        <button class="col-xs-12"
+                ng-disabled="regForm.$invalid"
+                ng-click="$ctrl.submit()">
+          Submit
+        </button>
+      </span>
+
+
+    </form>
+  </div>
+
+  <div class="col-xs12 error" ng-if="$ctrl.fav_error">
+    <hr>
+    {{ $ctrl.fav_error }}
+  </div>
+
+  <div class="col-xs12" ng-if="$ctrl.fav_item">
+    <hr>
+    <h3>Your information has been saved</h3>
+    <hr>
+    <h3>Your favorite dish : {{ $ctrl.fav_item.name }} ({{ $ctrl.fav_item.short_name }})</h3>
+    <span>
+      {{ $ctrl.fav_item.description }}
+    </span>
+  </div>
+
+</div>
